@@ -1,0 +1,22 @@
+{
+    "name": "projeto/x",
+    "description": "novo projeto",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/","Config\\": "config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "diogo vanderlan",
+            "email": "diogo.vanderlan@gmail.com"
+            
+
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "slim/slim": "^3.0",
+        "aws/aws-sdk-php": "^3.183"
+    }
+}
