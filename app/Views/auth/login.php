@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
-  <title>Formulário de Login e Registro com HTML5 e CSS3</title>
+  <title>Formulário de Login/cadastro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   
   <style>
@@ -253,13 +253,13 @@
         <form method="post" action="/login"> 
           <h1>Login</h1> 
           <p> 
-            <label for="nome_login">Seu nome</label>
-            <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. contato@htmlecsspro.com"/>
+            <label for="nome_login">E-mail</label>
+            <input id="nome_login" name="email" required="required" type="text" placeholder="ex. contato@htmlecsspro.com"/>
           </p>
            
           <p> 
-            <label for="email_login">Seu e-mail</label>
-            <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" /> 
+            <label for="email_login">Senha</label>
+            <input id="email_login" name="senha" required="required" type="password" placeholder="ex. senha" /> 
           </p>
            
           <p> 

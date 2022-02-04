@@ -19,12 +19,26 @@ class AuthController extends Controlle
   {
 
     $dados = $request->getParsedBody();
+    //print_r($dados);exit;
     if(Auth::login($dados['email'],$dados['senha'])){
       //Logado
-      return $response->withRedirect('/home');
+      $tipo = $_SESSION['tipo'];
+
+      if($tipo == 'usu') {
+        return $response->withRedirect('/home');
+      }
+
+      if($tipo == 'adm') {
+        return $response->withRedirect('/home2');
+      }
+
+      if($tipo == 'esp') {
+        return $response->withRedirect('/home3');
+      }
+     
     }else{
       //não está logado
-      return $response->withRedirect('/');
+      return $response->withRedirect('/login');
     }
 
   }
