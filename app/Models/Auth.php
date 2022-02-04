@@ -11,13 +11,22 @@ class Auth extends Model
      $modelo = new static;
      $usuarios = $modelo::all();
      foreach ($usuarios as $key => $value) {
-       if($value['email'] == $email && $value['senha'] == md5($senha)){
-         session_start();
-         $_SESSION['id'] = $value['id'];
-         $_SESSION['nome'] = $value['nome'];
-         $_SESSION['email'] = $value['email'];
-         return true;
-       }
+      if($value['email'] == $email && $value['senha'] == md5($senha)){
+
+        if($value['ativo'] == 'Sim') {
+
+          session_start();
+          $_SESSION['id'] = $value['id'];
+          $_SESSION['nome'] = $value['nome'];
+          $_SESSION['email'] = $value['email'];
+          $_SESSION['tipo'] = $value['tipo'];
+          return true;
+
+        }
+
+        return false;
+      }
+
      }
      return false;
   }

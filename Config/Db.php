@@ -5,7 +5,7 @@ class Db
 {
   public static function conexao()
   {
-    $conexao = new \PDO("mysql:host=localhost;dbname=x;charset=utf8","root","");
+    $conexao = new \PDO("mysql:host=localhost;dbname=prodx;charset=utf8","root","root");
     return $conexao;
   }
 }
