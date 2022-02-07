@@ -25,15 +25,15 @@ class AuthController extends Controlle
       $tipo = $_SESSION['tipo'];
 
       if($tipo == 'usu') {
-        return $response->withRedirect('/home');
+        return $response->withRedirect('/homeUsu');
       }
 
       if($tipo == 'adm') {
-        return $response->withRedirect('/home2');
+        return $response->withRedirect('/homeAdm');
       }
 
       if($tipo == 'esp') {
-        return $response->withRedirect('/home3');
+        return $response->withRedirect('/homeEsp');
       }
      
     }else{
@@ -50,7 +50,7 @@ class AuthController extends Controlle
     unset($_SESSION['nome']);
     unset($_SESSION['email']);
 
-    return $response->withRedirect('/');
+    return $response->withRedirect('/login');
 
   }
 
