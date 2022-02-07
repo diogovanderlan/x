@@ -23,6 +23,9 @@ $app->post('/login', AuthController::class . ':entrar');
 $app->get('/logout', AuthController::class . ':sair');
 
 #Rota home apos fazer o login
-$app->get('/home', HomeController::class . ':index');
+$app->get('/homeUsu', HomeController::class . ':homeUsu');
+$app->get('/homeEsp', HomeController::class . ':homeEsp');
+$app->get('/homeAdm', HomeController::class . ':homeAdm');
+
 
 $app->run();
