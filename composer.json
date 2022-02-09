@@ -19,6 +19,7 @@
     "minimum-stability": "dev",
     "require": {
         "slim/slim": "^3.0",
-        "aws/aws-sdk-php": "^3.183"
+        "aws/aws-sdk-php": "^3.183",
+        "phpmailer/phpmailer": "dev-master"
     }
 }
