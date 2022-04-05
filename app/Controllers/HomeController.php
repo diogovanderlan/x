@@ -26,7 +26,7 @@ class HomeController extends Controlle
     if($this->tipoUsuario == 'usu'){
       return $this->view('home/homeUsu',$response);
     }
-     return $this->view('home/home'.$_SESSION['tipo'],$response);
+     return $this->view('home/home'.$this->tipoUsuario,$response);
   }
 
   public function homeAdm(ServerRequestInterface $request, ResponseInterface $response)
@@ -34,7 +34,7 @@ class HomeController extends Controlle
     if($this->tipoUsuario == 'adm'){
       return $this->view('home/homeAdm',$response);
     }
-     return $this->view('home/home'.$_SESSION['tipo'],$response);
+     return $this->view('home/home'.$this->tipoUsuario,$response);
   }
 
   public function homeEsp(ServerRequestInterface $request, ResponseInterface $response)
@@ -42,7 +42,7 @@ class HomeController extends Controlle
     if($this->tipoUsuario == 'esp'){
       return $this->view('home/homeEsp',$response);
     }
-     return $this->view('home/home'.$_SESSION['tipo'],$response);
+     return $this->view('home/home'.$this->tipoUsuario,$response);
   }
 
 }

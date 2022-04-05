@@ -7,6 +7,7 @@ use Psr\Http\Message\ResponseInterface;
 use Slim\App;
 use App\Controllers\AuthController;
 use App\Controllers\HomeController;
+use App\Controllers\PerguntaController;
 
 $app = new App([
 
@@ -26,6 +27,12 @@ $app->get('/logout', AuthController::class . ':sair');
 $app->get('/homeUsu', HomeController::class . ':homeUsu');
 $app->get('/homeEsp', HomeController::class . ':homeEsp');
 $app->get('/homeAdm', HomeController::class . ':homeAdm');
+
+#Rotas perguntas
+$app->get('/pergunta', PerguntaController::class . ':listarPergunta');
+$app->post('/pergunta', PerguntaController::class . ':perguntar');
+$app->put('/pergunta', PerguntaController::class . ':editarPergunta');
+$app->delete('/pergunta', PerguntaController::class . ':deletarPerguntar');
 
 
 $app->run();
